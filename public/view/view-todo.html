@@ -7,10 +7,14 @@
         <h1 class="title">Add</h1>
 
         <form class="form">
-            <input type="text" class="form__input__title" placeholder="Your list">
+            <input type="text"
+                   class="form__input__title"
+                   placeholder="Your list"
+                   ng-model="dataList"
+            >
             <br>
             <br>
-            <button class="btn--yes min">Add <i class="fas fa-plus"></i></button>
+            <button class="btn--yes min" ng-click="addList(dataList)">Add <i class="fas fa-plus"></i></button>
         </form>
     </div>
 
@@ -22,9 +26,12 @@
             <i class="fas fa-align-right"></i>
         </h1>
 
+        <table class="table">
+            <tr class="blurtime" ng-repeat="list in listItems track by $index">
+                <td>{{ list | uppercase }}</td>
+                <td><i class="fas fa-trash-alt" ng-click="deleteList(list)"></i></td>
+            </tr>
+        </table>
 
-        <ul class="list">
-            <li ng-repeat="list in listItems">{{list | uppercase}}</li>
-        </ul>
     </div>
 </section>

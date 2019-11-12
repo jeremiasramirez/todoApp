@@ -4,4 +4,7 @@ app.config(["$routeProvider", function($routeProvider){
                 templateUrl: "public/view/view-todo.html",
                 controller: "controller-todo"
             })
+            .otherwise({
+                redirectTo: "/"
+            });
 }]);

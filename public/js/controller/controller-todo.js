@@ -1,5 +1,6 @@
 app.controller("controller-todo", ["$scope", function($scope){
 
-    $scope.name = "jeremias";
+    $scope.listItems = ["comer a las 11am", "Ir a correr"];
+
 
 }]);

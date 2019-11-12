@@ -4,14 +4,25 @@
     <!--add-->
     <div>
         <!-- title module add -->
-        <h1>Add</h1>
-    </div>
+        <h1 class="title">Add</h1>
 
+        <form class="form">
+            <input type="text" class="form__input__title" placeholder="Your list">
+            <br>
+            <br>
+            <button class="btn--yes min">Add</button>
+        </form>
+    </div>
 
 
     <!--show-->
     <div>
         <!-- title module show -->
-        <h1>List</h1>
+        <h1 class="title">List</h1>
+
+
+        <ul class="list">
+            <li ng-repeat="list in listItems">{{list | uppercase}}</li>
+        </ul>
     </div>
 </section>

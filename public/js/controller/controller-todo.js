@@ -15,7 +15,7 @@ app.controller("controller-todo", ["$scope", function($scope){
     $scope.deleteList = function(x){
        for(let i=0;i<$scope.listItems.length; i++){
            if($scope.listItems[i] === x){
-                $scope.listItems[i] = 'deleted'
+                $scope.listItems[i] = 'completed'
            }
        }
     }

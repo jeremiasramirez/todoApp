@@ -35,9 +35,9 @@
         </h1>
 
         <table class="table">
-            <tr class="blurtime" ng-repeat="list in listItems track by $index">
-                <td>{{ list | uppercase }}</td>
-                <td><i class="fas fa-trash-alt" ng-click="deleteList(list)"></i></td>
+            <tr ng-repeat="list in listItems track by $index">
+                <td class="alert--success" ng-hide="list == 0">{{ list | uppercase }}</td>
+                <td class="alert--error" ng-hide="list == 0"><i class="fas fa-trash-alt" ng-click="deleteList(list, $index)"></i></td>
             </tr>
         </table>
 

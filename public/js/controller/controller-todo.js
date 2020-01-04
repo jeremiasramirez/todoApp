@@ -12,12 +12,16 @@ app.controller("controller-todo", ["$scope", function($scope){
 
     };
 
-    $scope.deleteList = function(x){
+    $scope.deleteList = function(x, index){
        for(let i=0;i<$scope.listItems.length; i++){
            if($scope.listItems[i] === x){
-                $scope.listItems[i] = 'completed'
+                $scope.listItems[i] = 0
+               
+                 
            }
        }
+        
+
     }
 
 }]);
